@@ -1,0 +1,86 @@
+name: aizen
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies: 
+  flutter: 
+    sdk: flutter
+
+  # State Management
+  get: ^4.6.6
+  
+  # Storage
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.2
+
+  # Firebase & nofication
+  # firebase_core: ^2.25.3
+  # firebase_auth: ^4.17.3
+  # firebase_crashlytics: ^3.4.13
+  # firebase_analytics: ^10.8.4
+  # firebase_messaging: ^14.7.14
+  # flutter_local_notifications: ^16.3.2
+
+  # Network & Connection
+  connectivity_plus: ^5.0.2
+  internet_connection_checker_plus: ^2.2.0
+  url_launcher: ^6.2.4
+  dio: ^5.4.0
+  http: ^1.1.2
+
+  # Media
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.9
+  camera: ^0.10.5+9
+  image: ^4.1.6
+  file_picker: ^6.1.1
+  skeletonizer: ^1.0.1
+  extended_image: ^8.2.0
+
+  # Tools
+  app_settings: ^5.1.1
+  intl: ^0.18.1
+  uni_links: ^0.5.1
+  permission_handler: ^11.2.0
+  flutter_localization: ^0.2.0
+  path_provider: ^2.1.2
+  email_validator: ^2.1.17
+  currency_text_input_formatter: ^2.1.13
+  mask_text_input_formatter: ^2.8.0
+
+  # File Checking
+  mime: ^1.0.5
+
+dependency_overrides:
+  intl: ^0.19.0
+  http: ^1.2.0
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+# fonts:
+#     - family: MavenPro
+#       fonts:
+#         - asset: fonts/mavenpro/MavenPro-Regular.ttf
+#         - asset: fonts/mavenpro/MavenPro-Bold.ttf
+#           weight: 700
+#         - asset: fonts/mavenpro/MavenPro-Bold.ttf
+#           style: italic
+#           weight: 700
+
+flutter_icons:
+  android: "launcher_icon"
+  image_path_android: "assets/images/logo/ogo_ios.jpg"
+  image_path_ios: "assets/images/logo/logo_ios.jpg"
+  ios: true

@@ -1,0 +1,2 @@
+// GENERAL
+const add = 'add';

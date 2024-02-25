@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(iOS) DEV",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--dart-define",
+                "API_URL=",
+            ]
+        },
+        {
+            "name": "(iOS) PROD",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--dart-define",
+                "API_URL=",
+            ]
+        },
+        {
+            "name": "(Android) DEV",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--dart-define",
+                "API_URL=",
+            ]
+        },
+        {
+            "name": "(Android) PROD",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart",
+            "args": [
+                "--debug",
+                "--dart-define",
+                "API_URL=",
+            ]
+        },
+    ]
+}
