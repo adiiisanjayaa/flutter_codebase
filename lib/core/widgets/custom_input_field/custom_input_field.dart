@@ -8,7 +8,6 @@ export 'email_input_field.dart';
 export 'phone_input_field.dart';
 export 'password_input_field.dart';
 export 'search_input_field.dart';
-export 'mask_input_field.dart';
 
 enum CustomInputFieldBorderStyle {
   underlineBorder,

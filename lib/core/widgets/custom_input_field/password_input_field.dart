@@ -64,6 +64,7 @@ class PasswordInputField extends StatelessWidget {
                     padding: getAdditionalPaddingSuffixIcon(borderType),
                     icon: const AppImage(
                       // svg: obscureText ? Assets.icHideEye : Assets.icShowEye,
+                      icon: Icons.remove_red_eye_rounded,
                       color: AppColors.grayMedium,
                     ),
                     onPressed: onTapSuffixIcon,

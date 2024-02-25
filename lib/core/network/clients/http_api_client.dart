@@ -5,8 +5,8 @@ import 'dart:io';
 import 'package:aizen/app/modules/error_page/controllers/error_page_controller.dart';
 import 'package:aizen/app/routes/app_pages.dart';
 import 'package:aizen/app/routes/nav_args.dart';
+import 'package:aizen/core/widgets/custom_dialog.dart';
 import 'package:aizen/core/widgets/custom_snack_bar.dart';
-import 'package:aizen/core/widgets/dialog_offline_connection.dart';
 import 'package:aizen/utils/method/analytics_method.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
@@ -66,7 +66,7 @@ class HttpApiClient implements ApiClient {
         }
       }
     } else {
-      DialogOfflineConnection.find.show();
+      CustomDialog.showDialogOffline();
     }
     var responseJSON = checkApiError(response, url, isMap, false);
     return responseJSON;
@@ -137,7 +137,7 @@ class HttpApiClient implements ApiClient {
         }
       }
     } else {
-      DialogOfflineConnection.find.show();
+      CustomDialog.showDialogOffline();
     }
     var responseJSON = checkApiError(response, url, isMap, errorNeedReLogin);
     return responseJSON;
@@ -205,7 +205,7 @@ class HttpApiClient implements ApiClient {
         }
       }
     } else {
-      DialogOfflineConnection.find.show();
+      CustomDialog.showDialogOffline();
     }
     var responseJSON = checkApiError(response, url, isMap, false);
     return responseJSON;
@@ -275,7 +275,7 @@ class HttpApiClient implements ApiClient {
         }
       }
     } else {
-      DialogOfflineConnection.find.show();
+      CustomDialog.showDialogOffline();
     }
     var responseJSON = checkApiError(response, url, isMap, errorNeedReLogin);
     return responseJSON;

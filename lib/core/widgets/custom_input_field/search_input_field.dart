@@ -44,9 +44,11 @@ class SearchInputField extends StatelessWidget {
         ),
         prefixIcon: const AppImage(
           // svg: Assets.icSearchNormal,
+          icon: Icons.search,
+          backgroundColor: Colors.transparent,
           width: 24,
           height: 24,
-          color: AppColors.grayDark,
+          // color: AppColors.grayDark,
         ).marginOnly(left: 16, right: 12),
         prefixIconConstraints: const BoxConstraints(maxHeight: 24),
         fillColor: AppColors.grayLight,

@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:aizen/core/themes/themes.dart';
-import 'package:aizen/core/widgets/app_image.dart';
 import 'package:aizen/core/widgets/fancy_dialog.dart';
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,7 @@ import 'package:get/get.dart';
 enum DialogReturn { positive, negative }
 
 class CustomDialog {
-  static void showDialogOfflineMyAppOld({bool fromSplashScreen = false}) {
+  static void showDialogOffline({bool fromSplashScreen = false}) {
     Get.dialog(
       const AppFancyDialog(
         title: 'No internet connection',
@@ -19,9 +18,9 @@ class CustomDialog {
         positiveButton: 'Oke!',
         closeType: IdSimpleCloseType.light,
         isConnection: true,
-        withImage: AppImage(
-            // asset: Assets.noInternetConnection,
-            ),
+        // withImage: AppImage(
+        //     // asset: Assets.noInternetConnection,
+        //     ),
       ),
     ).then((value) {
       AppFancyDialog.handleReturn(value, onNegative: () async {

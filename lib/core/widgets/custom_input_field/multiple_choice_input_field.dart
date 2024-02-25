@@ -70,13 +70,14 @@ class MultipleChoiceInputField extends StatelessWidget {
           ),
           decoration: InputDecoration(
             hintText: hintText,
-            prefixIcon: prefix != null ? prefixWidget() : (prefixIcon.isNotNull ? defaultPrefixWidget() : null),
+            // prefixIcon: prefix != null ? prefixWidget() : (prefixIcon.isNotNull ? defaultPrefixWidget() : null),
             prefixIconConstraints: prefix != null ? const BoxConstraints(maxHeight: 24) : (prefixIcon.isNotNull ? const BoxConstraints(maxHeight: 24) : null),
             suffixIcon: isShowSuffixIcon
                 ? Padding(
                     padding: getAdditionalPaddingSuffixIcon(borderType),
                     child: AppImage(
                       // svg: suffixIcon,
+                      icon: Icons.arrow_drop_down,
                       color: isEnable ? null : AppColors.lightGrey,
                     ),
                   )
