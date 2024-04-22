@@ -1,14 +1,14 @@
-import 'package:aizen/core/themes/themes.dart';
-import 'package:aizen/core/widgets/chip_button.dart';
-import 'package:aizen/core/widgets/custom_button.dart';
-import 'package:aizen/core/widgets/custom_checkbox.dart';
-import 'package:aizen/core/widgets/custom_dialog.dart';
-import 'package:aizen/core/widgets/custom_input_field/custom_input_field.dart';
-import 'package:aizen/core/widgets/custom_radio.dart';
-import 'package:aizen/core/widgets/custom_snack_bar.dart';
-import 'package:aizen/core/widgets/lancer_app_bar.dart';
-import 'package:aizen/core/widgets/lancer_dialog.dart';
-import 'package:aizen/core/widgets/loader.dart';
+import 'package:app/core/themes/themes.dart';
+import 'package:app/core/widgets/chip_button.dart';
+import 'package:app/core/widgets/custom_button.dart';
+import 'package:app/core/widgets/custom_checkbox.dart';
+import 'package:app/core/widgets/custom_dialog.dart';
+import 'package:app/core/widgets/custom_input_field/custom_input_field.dart';
+import 'package:app/core/widgets/custom_radio.dart';
+import 'package:app/core/widgets/custom_snack_bar.dart';
+import 'package:app/core/widgets/lancer_app_bar.dart';
+import 'package:app/core/widgets/lancer_dialog.dart';
+import 'package:app/core/widgets/loader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

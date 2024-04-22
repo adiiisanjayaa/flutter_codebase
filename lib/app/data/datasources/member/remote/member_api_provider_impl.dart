@@ -1,8 +1,8 @@
-import 'package:aizen/app/data/models/member/login_response.dart';
-import 'package:aizen/app/data/models/member/register_response.dart';
-import 'package:aizen/core/base/base_result.dart';
-import 'package:aizen/core/constant/api_url_constant.dart';
-import 'package:aizen/core/network/clients/api_client.dart';
+import 'package:app/app/data/models/member/login_response.dart';
+import 'package:app/app/data/models/member/register_response.dart';
+import 'package:app/core/base/base_result.dart';
+import 'package:app/core/constant/api_url_constant.dart';
+import 'package:app/core/network/clients/api_client.dart';
 import 'member_api_provider.dart';
 
 class MemberApiProviderImpl implements MemberApiProvider {

@@ -1,4 +1,4 @@
-# aizen
+# app
 
 A new Flutter project.
 

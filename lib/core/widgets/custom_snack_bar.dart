@@ -1,4 +1,4 @@
-import 'package:aizen/core/themes/themes.dart';
+import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

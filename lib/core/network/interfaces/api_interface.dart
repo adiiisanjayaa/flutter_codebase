@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:aizen/core/constant/app_constant.dart';
+import 'package:app/core/constant/app_constant.dart';
 import 'package:dio/dio.dart';
 
 class ApiInterface {

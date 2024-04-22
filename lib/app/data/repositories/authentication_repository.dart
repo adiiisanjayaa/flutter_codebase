@@ -1,10 +1,10 @@
 import 'dart:developer';
 
-import 'package:aizen/app/data/datasources/member/remote/member_api_provider.dart';
-import 'package:aizen/app/data/models/member/login_response.dart';
-import 'package:aizen/app/data/models/member/register_response.dart';
-import 'package:aizen/core/base/base_result.dart';
-import 'package:aizen/core/network/exceptions/network_exception.dart';
+import 'package:app/app/data/datasources/member/remote/member_api_provider.dart';
+import 'package:app/app/data/models/member/login_response.dart';
+import 'package:app/app/data/models/member/register_response.dart';
+import 'package:app/core/base/base_result.dart';
+import 'package:app/core/network/exceptions/network_exception.dart';
 
 class AuthenticationRepository {
   final MemberApiProvider memberProvider;

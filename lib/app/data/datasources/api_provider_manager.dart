@@ -1,5 +1,5 @@
-import 'package:aizen/core/network/clients/dio_api_client.dart';
-import 'package:aizen/core/network/clients/http_api_client.dart';
+import 'package:app/core/network/clients/dio_api_client.dart';
+import 'package:app/core/network/clients/http_api_client.dart';
 import 'package:get/get.dart';
 import 'member/remote/member_api_provider_impl.dart';
 

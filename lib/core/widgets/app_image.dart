@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:math';
-import 'package:aizen/core/themes/themes.dart';
+import 'package:app/core/themes/themes.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:aizen/app/routes/nav_args.dart';
+import 'package:app/app/routes/nav_args.dart';
 import 'package:get/get.dart';
 
 enum ErrorType {

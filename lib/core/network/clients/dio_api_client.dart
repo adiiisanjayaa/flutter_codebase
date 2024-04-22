@@ -1,10 +1,10 @@
 import 'dart:developer';
-import 'package:aizen/app/modules/error_page/controllers/error_page_controller.dart';
-import 'package:aizen/app/routes/app_pages.dart';
-import 'package:aizen/app/routes/nav_args.dart';
-import 'package:aizen/core/widgets/custom_dialog.dart';
-import 'package:aizen/core/widgets/custom_snack_bar.dart';
-import 'package:aizen/utils/method/analytics_method.dart';
+import 'package:app/app/modules/error_page/controllers/error_page_controller.dart';
+import 'package:app/app/routes/app_pages.dart';
+import 'package:app/app/routes/nav_args.dart';
+import 'package:app/core/widgets/custom_dialog.dart';
+import 'package:app/core/widgets/custom_snack_bar.dart';
+import 'package:app/utils/method/analytics_method.dart';
 import 'package:dio/dio.dart' as dio;
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';

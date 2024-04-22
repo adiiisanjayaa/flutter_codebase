@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:aizen/core/themes/themes.dart';
-import 'package:aizen/core/widgets/fancy_dialog.dart';
+import 'package:app/core/themes/themes.dart';
+import 'package:app/core/widgets/fancy_dialog.dart';
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

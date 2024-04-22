@@ -1,6 +1,6 @@
-import 'package:aizen/core/extensions/extensions.dart';
-import 'package:aizen/core/themes/themes.dart';
-import 'package:aizen/core/widgets/app_image.dart';
+import 'package:app/core/extensions/extensions.dart';
+import 'package:app/core/themes/themes.dart';
+import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

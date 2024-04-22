@@ -1,5 +1,5 @@
-import 'package:aizen/core/themes/themes.dart';
-import 'package:aizen/core/widgets/custom_button.dart';
+import 'package:app/core/themes/themes.dart';
+import 'package:app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

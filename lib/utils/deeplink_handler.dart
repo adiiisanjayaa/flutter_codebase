@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:developer';
-import 'package:aizen/core/constant/deeplink_constant.dart';
-import 'package:aizen/core/constant/storage_names.dart';
-import 'package:aizen/utils/storage_methods.dart';
+import 'package:app/core/constant/deeplink_constant.dart';
+import 'package:app/core/constant/storage_names.dart';
+import 'package:app/utils/storage_methods.dart';
 import 'package:uni_links/uni_links.dart';
 
 class DeeplinkHandler {

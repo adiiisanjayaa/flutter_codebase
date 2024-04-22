@@ -1,4 +1,4 @@
-import 'package:aizen/core/constant/app_constant.dart';
+import 'package:app/core/constant/app_constant.dart';
 
 class DeeplinkConstant {
   static const String hostName = AppConstant.webURL;

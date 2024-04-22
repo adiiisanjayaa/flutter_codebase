@@ -1,7 +1,7 @@
 // import 'dart:developer';
 
-// import 'package:aizen/core/constant/storage_names.dart';
-// import 'package:aizen/utils/storage_methods.dart';
+// import 'package:app/core/constant/storage_names.dart';
+// import 'package:app/utils/storage_methods.dart';
 // import 'package:get/get.dart';
 
 // class UserService extends GetxService {

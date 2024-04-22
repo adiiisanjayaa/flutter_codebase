@@ -1,4 +1,4 @@
-package com.aizen.mobility.aizen
+package com.app.example
 
 import io.flutter.embedding.android.FlutterActivity
 
