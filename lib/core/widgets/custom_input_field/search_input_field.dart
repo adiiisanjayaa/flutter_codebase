@@ -2,6 +2,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SearchInputField extends StatelessWidget {
   const SearchInputField({
@@ -20,9 +21,10 @@ class SearchInputField extends StatelessWidget {
     return TextFormField(
       controller: textController,
       onChanged: onChanged,
-      style: AppStyles.styleTextBody14OpenSans(
+      style: AppStyles.styleTextBody(
         colorText: AppColors.grayDark,
         fontWeight: FontWeight.w400,
+        size: 14.sp,
       ),
       decoration: InputDecoration(
         hintText: hintText,

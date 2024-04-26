@@ -47,8 +47,8 @@ class AppBottomNavBar extends StatelessWidget {
                 unselectedItemColor: AppColors.gray2,
                 selectedFontSize: 15.0.sp,
                 unselectedFontSize: 15.0.sp,
-                selectedLabelStyle: AppStyles.styleTextBody14(
-                  size: 14.sp,
+                selectedLabelStyle: AppStyles.styleTextBody(
+                  size: 16.sp,
                   fontWeight: FontWeight.bold,
                 ),
                 currentIndex: controller.index,

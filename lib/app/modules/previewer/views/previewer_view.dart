@@ -11,6 +11,7 @@ import 'package:app/core/widgets/lancer_dialog.dart';
 import 'package:app/core/widgets/loader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../controllers/previewer_controller.dart';
 
@@ -57,10 +58,11 @@ class PreviewerView extends GetView<PreviewerController> {
               enabled: true,
               childBuilder: (context, style) => Text(
                 "BUTTON",
-                style: AppStyles.styleTextBody16(
+                style: AppStyles.styleTextBody(
                   fontWeight: FontWeight.bold,
                   height: 1.4,
                   colorText: AppColors.white,
+                  size: 18.sp,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -74,10 +76,11 @@ class PreviewerView extends GetView<PreviewerController> {
               enabled: true,
               childBuilder: (context, style) => Text(
                 "BUTTON",
-                style: AppStyles.styleTextBody16(
+                style: AppStyles.styleTextBody(
                   fontWeight: FontWeight.bold,
                   height: 1.4,
                   colorText: AppColors.green,
+                  size: 18.sp,
                 ),
                 textAlign: TextAlign.center,
               ),

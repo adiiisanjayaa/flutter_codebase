@@ -2,6 +2,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 enum IdSimpleCloseType { light, dark, none }
 
@@ -144,8 +145,8 @@ class AppDialogState extends State<AppFancyDialog> {
       childBuilder: (_, style) => Text(
         widget.positiveButton!,
         textAlign: TextAlign.center,
-        style: AppStyles.styleTextBody16(
-          size: 13,
+        style: AppStyles.styleTextBody(
+          size: 13.sp,
           fontWeight: FontWeight.bold,
           colorText: AppColors.white,
         ),
@@ -166,8 +167,8 @@ class AppDialogState extends State<AppFancyDialog> {
       },
       childBuilder: (_, style) => Text(
         widget.negativeButton!,
-        style: AppStyles.styleTextBody14(
-          size: 13,
+        style: AppStyles.styleTextBody(
+          size: 13.sp,
           fontWeight: FontWeight.w700,
           colorText: AppColors.green,
         ),
@@ -204,7 +205,7 @@ class AppDialogState extends State<AppFancyDialog> {
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 0),
                 child: Text(
                   widget.title,
-                  style: AppStyles.styleTextBody18(colorText: Colors.black, fontWeight: FontWeight.bold),
+                  style: AppStyles.styleTextBody(size: 20.sp, colorText: Colors.black, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -215,7 +216,7 @@ class AppDialogState extends State<AppFancyDialog> {
                   padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
                   child: Text(
                     widget.desc!,
-                    style: AppStyles.styleTextBody14(colorText: Colors.black),
+                    style: AppStyles.styleTextBody(size: 16.sp, colorText: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),

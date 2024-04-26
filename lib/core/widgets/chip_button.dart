@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../themes/themes.dart';
 
@@ -35,10 +36,11 @@ class ChipButton extends StatelessWidget {
           children: [
             Text(
               title,
-              style: AppStyles.styleTextBody14OpenSans(
+              style: AppStyles.styleTextBody(
                 fontWeight: FontWeight.w400,
                 colorText: isSelected ? AppColors.white : AppColors.textBlack,
                 height: 1.4,
+                size: 16.sp,
               ),
             ),
           ],

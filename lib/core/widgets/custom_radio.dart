@@ -1,5 +1,6 @@
 import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CustomRadio<T> extends StatelessWidget {
   /// Radio Button List Tile Without Padding
@@ -36,10 +37,11 @@ class CustomRadio<T> extends StatelessWidget {
           Expanded(
             child: Text(
               title,
-              style: AppStyles.styleTextBody12OpenSans(
+              style: AppStyles.styleTextBody(
                 fontWeight: FontWeight.w400,
                 colorText: AppColors.textBlack,
                 height: 1.4,
+                size: 14.sp,
               ),
             ),
           ),

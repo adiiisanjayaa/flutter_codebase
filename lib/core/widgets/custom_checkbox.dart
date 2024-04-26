@@ -1,5 +1,6 @@
 import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CustomCheckbox extends StatelessWidget {
   /// Checkbox List Tile Without Padding
@@ -35,10 +36,11 @@ class CustomCheckbox extends StatelessWidget {
             },
             child: Text(
               title,
-              style: AppStyles.styleTextBody12OpenSans(
+              style: AppStyles.styleTextBody(
                 fontWeight: FontWeight.w400,
                 colorText: AppColors.textBlack,
                 height: 1.4,
+                size: 14.sp,
               ),
             ),
           ),

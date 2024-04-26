@@ -5,6 +5,7 @@ import 'package:app/core/widgets/fancy_dialog.dart';
 import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 enum DialogReturn { positive, negative }
 
@@ -61,10 +62,11 @@ class CustomDialog {
                     if (title != null && title.isNotEmpty) ...[
                       Text(
                         title,
-                        style: AppStyles.styleTextBody14(
+                        style: AppStyles.styleTextBody(
                           colorText: AppColors.textBlack,
                           fontWeight: FontWeight.w700,
                           height: 1.3,
+                          size: 16.sp,
                         ),
                         textAlign: TextAlign.start,
                       ),
@@ -73,10 +75,11 @@ class CustomDialog {
                     messageWidget ??
                         Text(
                           message,
-                          style: AppStyles.styleTextBody14(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.grayMedium,
                             fontWeight: FontWeight.normal,
                             height: 1.3,
+                            size: 16.sp,
                           ),
                           textAlign: TextAlign.start,
                         ),
@@ -96,10 +99,11 @@ class CustomDialog {
                       padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: Text(
                         positiveText,
-                        style: AppStyles.styleTextBody14(
+                        style: AppStyles.styleTextBody(
                           colorText: AppColors.purple,
                           fontWeight: FontWeight.w700,
                           height: 1.3,
+                          size: 16.sp,
                         ),
                         textAlign: TextAlign.start,
                       ),
@@ -138,10 +142,11 @@ class CustomDialog {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   message,
-                  style: AppStyles.styleTextBody14(
+                  style: AppStyles.styleTextBody(
                     colorText: AppColors.grayMedium,
                     fontWeight: FontWeight.normal,
                     height: 1.3,
+                    size: 16.sp,
                   ),
                   textAlign: TextAlign.start,
                 ),
@@ -160,10 +165,11 @@ class CustomDialog {
                         padding: const EdgeInsets.only(right: 24),
                         child: Text(
                           negativeText,
-                          style: AppStyles.styleTextBody14(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.blackGrey,
                             fontWeight: FontWeight.w700,
                             height: 1.3,
+                            size: 16.sp,
                           ),
                           textAlign: TextAlign.start,
                         ),
@@ -176,10 +182,11 @@ class CustomDialog {
                         padding: const EdgeInsets.only(right: 24),
                         child: Text(
                           positiveText,
-                          style: AppStyles.styleTextBody14(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.purple,
                             fontWeight: FontWeight.w700,
                             height: 1.3,
+                            size: 16.sp,
                           ),
                           textAlign: TextAlign.start,
                         ),
@@ -220,7 +227,11 @@ class CustomDialog {
           ),
           Text(
             message,
-            style: AppStyles.styleTextBody14(colorText: AppColors.blackGrey, fontWeight: FontWeight.w700),
+            style: AppStyles.styleTextBody(
+              colorText: AppColors.blackGrey,
+              fontWeight: FontWeight.w700,
+              size: 16.sp,
+            ),
             textAlign: TextAlign.center,
           ),
         ],
@@ -248,19 +259,21 @@ class CustomDialog {
                       children: [
                         Text(
                           'Update Required',
-                          style: AppStyles.styleTextBody18(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.textBlack,
                             fontWeight: FontWeight.w700,
                             height: 1.4,
+                            size: 20.sp,
                           ),
                         ),
                         const SizedBox(height: 14),
                         Text(
                           'An Update is available. Please update the app to latest version',
-                          style: AppStyles.styleTextBody16(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.textBlack,
                             fontWeight: FontWeight.w400,
                             height: 1.4,
+                            size: 18.sp,
                           ),
                         ),
                       ],
@@ -281,10 +294,11 @@ class CustomDialog {
                         child: Text(
                           'Update',
                           textAlign: TextAlign.center,
-                          style: AppStyles.styleTextBody16(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.blackGrey,
                             fontWeight: FontWeight.w700,
                             height: 1.4,
+                            size: 18.sp,
                           ),
                         ),
                       ),
@@ -320,19 +334,21 @@ class CustomDialog {
                       children: [
                         Text(
                           'Update Available',
-                          style: AppStyles.styleTextBody18(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.textBlack,
                             fontWeight: FontWeight.w700,
                             height: 1.4,
+                            size: 20.sp,
                           ),
                         ),
                         const SizedBox(height: 14),
                         Text(
                           'An Update is available. Would you like to update ?',
-                          style: AppStyles.styleTextBody16(
+                          style: AppStyles.styleTextBody(
                             colorText: AppColors.textBlack,
                             fontWeight: FontWeight.w400,
                             height: 1.4,
+                            size: 18.sp,
                           ),
                         ),
                       ],
@@ -354,10 +370,11 @@ class CustomDialog {
                           child: Text(
                             'Skip',
                             textAlign: TextAlign.center,
-                            style: AppStyles.styleTextBody16(
+                            style: AppStyles.styleTextBody(
                               colorText: AppColors.blackGrey,
                               fontWeight: FontWeight.w700,
                               height: 1.4,
+                              size: 18.sp,
                             ),
                           ),
                         ),
@@ -375,10 +392,11 @@ class CustomDialog {
                           child: Text(
                             'Update',
                             textAlign: TextAlign.center,
-                            style: AppStyles.styleTextBody16(
+                            style: AppStyles.styleTextBody(
                               colorText: AppColors.blackGrey,
                               fontWeight: FontWeight.w700,
                               height: 1.4,
+                              size: 18.sp,
                             ),
                           ),
                         ),

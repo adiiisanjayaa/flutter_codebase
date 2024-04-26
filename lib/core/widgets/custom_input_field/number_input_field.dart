@@ -3,6 +3,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'custom_input_field.dart';
 
@@ -56,9 +57,10 @@ class NumberInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody12OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: AppColors.textBlack,
               fontWeight: FontWeight.w400,
+              size: 14.sp,
             ),
           ).marginOnly(bottom: getTitleMargin(borderType)),
         ],
@@ -71,7 +73,10 @@ class NumberInputField extends StatelessWidget {
           keyboardType: getKeyboardType(),
           inputFormatters: getInputFormatter(),
           maxLength: maxLength,
-          style: AppStyles.styleTextBody14OpenSans(fontWeight: FontWeight.w400),
+          style: AppStyles.styleTextBody(
+            fontWeight: FontWeight.w400,
+            size: 16.sp,
+          ),
           autofocus: autoFocus,
           decoration: InputDecoration(
             hintText: hintText,
@@ -87,7 +92,7 @@ class NumberInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody12OpenSans(fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],
@@ -210,9 +215,10 @@ class CurrencyTextInputField extends StatelessWidget {
         children: [
           Text(
             'Rp',
-            style: AppStyles.styleTextBody14OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
               fontWeight: FontWeight.w700,
+              size: 16.sp,
             ),
           ),
           Container(
@@ -273,9 +279,10 @@ class PercentInputField extends StatelessWidget {
         children: [
           Text(
             '%',
-            style: AppStyles.styleTextBody14OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
               fontWeight: FontWeight.w700,
+              size: 16.sp,
             ),
           ),
           Container(
@@ -335,9 +342,10 @@ class NumericInputField extends StatelessWidget {
       padding: getAdditionalPaddingSuffixIcon(borderType),
       child: Text(
         suffixText.orEmpty,
-        style: AppStyles.styleTextBody14OpenSans(
+        style: AppStyles.styleTextBody(
           colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
           fontWeight: FontWeight.w700,
+          size: 16.sp,
         ),
       ),
     );

@@ -3,6 +3,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'custom_input_field.dart';
 
@@ -42,9 +43,10 @@ class PasswordInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody12OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: AppColors.textBlack,
               fontWeight: FontWeight.w400,
+              size: 14.sp,
             ),
           ).marginOnly(bottom: getTitleMargin(borderType)),
         ],
@@ -56,7 +58,7 @@ class PasswordInputField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: TextInputType.text,
           inputFormatters: AppInputFormatter.passwordFormat,
-          style: AppStyles.styleTextBody14OpenSans(fontWeight: FontWeight.w400),
+          style: AppStyles.styleTextBody(size: 16.sp, fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: isShowSuffixIcon
@@ -78,7 +80,7 @@ class PasswordInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody12OpenSans(fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],

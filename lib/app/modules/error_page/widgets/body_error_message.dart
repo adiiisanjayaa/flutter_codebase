@@ -2,6 +2,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class BodyErrorMessage extends StatelessWidget {
   const BodyErrorMessage({
@@ -36,17 +37,19 @@ class BodyErrorMessage extends StatelessWidget {
               ).marginOnly(bottom: 20),
               Text(
                 title,
-                style: AppStyles.styleTextBody16OpenSans(
+                style: AppStyles.styleTextBody(
                   colorText: AppColors.textBlack,
                   height: 1.4,
+                  size: 18.sp,
                 ),
                 textAlign: TextAlign.center,
               ).marginOnly(bottom: 16.0),
               Text(
                 content,
-                style: AppStyles.styleTextBody12OpenSans(
+                style: AppStyles.styleTextBody(
                   colorText: AppColors.grayMedium,
                   height: 1.4,
+                  size: 14.sp,
                 ),
                 textAlign: TextAlign.center,
               ).marginOnly(bottom: 22.0),
@@ -54,9 +57,10 @@ class BodyErrorMessage extends StatelessWidget {
                 onTap: action,
                 child: Text(
                   titleAction,
-                  style: AppStyles.styleTextBody14OpenSans(
+                  style: AppStyles.styleTextBody(
                     colorText: AppColors.purple,
                     fontWeight: FontWeight.bold,
+                    size: 16.sp,
                   ),
                   textAlign: TextAlign.center,
                 ),

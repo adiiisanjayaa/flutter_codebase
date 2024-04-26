@@ -3,6 +3,7 @@ import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'custom_input_field.dart';
 
@@ -48,9 +49,10 @@ class MultipleChoiceInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody12OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: AppColors.textBlack,
               fontWeight: FontWeight.w400,
+              size: 14.sp,
             ),
           ).marginOnly(bottom: getTitleMargin(borderType)),
         ],
@@ -64,9 +66,10 @@ class MultipleChoiceInputField extends StatelessWidget {
           keyboardType: TextInputType.none,
           minLines: 1,
           maxLines: maxLines,
-          style: AppStyles.styleTextBody14OpenSans(
+          style: AppStyles.styleTextBody(
             fontWeight: FontWeight.w400,
             height: 1.4,
+            size: 16.sp,
           ),
           decoration: InputDecoration(
             hintText: hintText,
@@ -90,7 +93,12 @@ class MultipleChoiceInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody12OpenSans(fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty
+                ? AppStyles.styleTextBody(
+                    fontWeight: FontWeight.w400,
+                    size: 14.sp,
+                  )
+                : const TextStyle(height: 0),
           ),
         ),
       ],

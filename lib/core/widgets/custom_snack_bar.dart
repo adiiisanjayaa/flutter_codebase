@@ -1,6 +1,7 @@
 import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CustomSnackBar {
   static void showNewSnackBar({
@@ -24,9 +25,10 @@ class CustomSnackBar {
         messageText: customMessage ??
             Text(
               message,
-              style: AppStyles.styleTextBody14OpenSans(
+              style: AppStyles.styleTextBody(
                 colorText: Colors.white,
                 height: 1.4,
+                size: 16.sp,
               ),
               textAlign: textAlign,
             ),

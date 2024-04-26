@@ -2,6 +2,7 @@ import 'package:app/core/extensions/extensions.dart';
 import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'custom_input_field.dart';
 
@@ -37,9 +38,10 @@ class PhoneInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody12OpenSans(
+            style: AppStyles.styleTextBody(
               colorText: AppColors.textBlack,
               fontWeight: FontWeight.w400,
+              size: 14.sp,
             ),
           ).marginOnly(bottom: getTitleMargin(borderType)),
         ],
@@ -51,7 +53,7 @@ class PhoneInputField extends StatelessWidget {
           validator: validator,
           keyboardType: TextInputType.phone,
           inputFormatters: AppInputFormatter.phoneFormat,
-          style: AppStyles.styleTextBody14OpenSans(fontWeight: FontWeight.w400),
+          style: AppStyles.styleTextBody(size: 16.sp, fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             hintText: hintText,
             prefixIcon: Padding(
@@ -61,9 +63,10 @@ class PhoneInputField extends StatelessWidget {
                 children: [
                   Text(
                     '+62',
-                    style: AppStyles.styleTextBody14OpenSans(
+                    style: AppStyles.styleTextBody(
                       colorText: AppColors.grayDark,
                       fontWeight: FontWeight.w700,
+                      size: 16.sp,
                     ),
                   ),
                   Container(
@@ -82,7 +85,7 @@ class PhoneInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody12OpenSans(fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],

@@ -10,7 +10,7 @@
             "args": [
                 "--debug",
                 "--dart-define",
-                "API_URL=",
+                "API_URL=hostname.com",
             ]
         },
         {
@@ -22,7 +22,7 @@
             "args": [
                 "--debug",
                 "--dart-define",
-                "API_URL=",
+                "API_URL=hostname.com",
             ]
         },
         {
@@ -46,7 +46,7 @@
             "args": [
                 "--debug",
                 "--dart-define",
-                "API_URL=",
+                "API_URL=hostname.com",
             ]
         },
     ]

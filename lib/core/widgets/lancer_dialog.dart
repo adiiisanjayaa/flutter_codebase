@@ -3,6 +3,7 @@ import 'package:app/core/widgets/app_image.dart';
 import 'package:app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 enum LCSimpleCloseType { light, dark, none }
 
@@ -74,7 +75,11 @@ class LancerDialogState extends State<LancerDialog> {
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 widget.title!,
-                style: AppStyles.styleTextBody18(colorText: Colors.black, fontWeight: FontWeight.bold),
+                style: AppStyles.styleTextBody(
+                  colorText: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  size: 20.sp,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -85,7 +90,10 @@ class LancerDialogState extends State<LancerDialog> {
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 widget.desc!,
-                style: AppStyles.styleTextBody14(colorText: Colors.black),
+                style: AppStyles.styleTextBody(
+                  colorText: Colors.black,
+                  size: 16.sp,
+                ),
                 textAlign: widget.textAlign ?? TextAlign.center,
               ),
             ),
@@ -118,8 +126,8 @@ class LancerDialogState extends State<LancerDialog> {
       },
       childBuilder: (_, style) => Text(
         widget.positiveButton!,
-        style: AppStyles.styleTextBody16(
-          size: 15,
+        style: AppStyles.styleTextBody(
+          size: 15.sp,
           fontWeight: FontWeight.w700,
           colorText: AppColors.white,
         ),
@@ -141,7 +149,7 @@ class LancerDialogState extends State<LancerDialog> {
       },
       childBuilder: (_, style) => Text(
         widget.negativeButton!,
-        style: AppStyles.styleTextBody14(
+        style: AppStyles.styleTextBody(
           size: 15,
           fontWeight: FontWeight.w700,
           colorText: AppColors.green,
@@ -221,7 +229,7 @@ class LancerDialogIconState extends State<LancerDialogIcon> {
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 widget.title!,
-                style: AppStyles.styleTextBody18(colorText: Colors.black, fontWeight: FontWeight.bold),
+                style: AppStyles.styleTextBody(size: 20.sp, colorText: Colors.black, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -243,7 +251,10 @@ class LancerDialogIconState extends State<LancerDialogIcon> {
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 widget.desc!,
-                style: AppStyles.styleTextBody14(colorText: Colors.black),
+                style: AppStyles.styleTextBody(
+                  colorText: Colors.black,
+                  size: 16.sp,
+                ),
                 textAlign: widget.textAlign ?? TextAlign.center,
               ),
             ),
@@ -257,8 +268,8 @@ class LancerDialogIconState extends State<LancerDialogIcon> {
             },
             childBuilder: (_, style) => Text(
               widget.positiveButton!,
-              style: AppStyles.styleTextBody16(
-                size: 15,
+              style: AppStyles.styleTextBody(
+                size: 15.sp,
                 fontWeight: FontWeight.w700,
                 colorText: AppColors.white,
               ),
@@ -353,7 +364,10 @@ class LancerDialogImageState extends State<LancerDialogImage> {
               padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
               child: Text(
                 widget.desc!,
-                style: AppStyles.styleTextBody14(colorText: Colors.black),
+                style: AppStyles.styleTextBody(
+                  colorText: Colors.black,
+                  size: 16.sp,
+                ),
                 textAlign: widget.textAlign ?? TextAlign.center,
               ),
             ),
@@ -371,7 +385,7 @@ class LancerDialogImageState extends State<LancerDialogImage> {
                   },
                   childBuilder: (_, style) => Text(
                     widget.positiveButton!,
-                    style: AppStyles.styleTextBody16(size: 15, fontWeight: FontWeight.w700, colorText: AppColors.purple),
+                    style: AppStyles.styleTextBody(size: 15.sp, fontWeight: FontWeight.w700, colorText: AppColors.purple),
                     textAlign: TextAlign.center,
                   ),
                   isFullButton: false,
@@ -388,7 +402,7 @@ class LancerDialogImageState extends State<LancerDialogImage> {
                   },
                   childBuilder: (_, style) => Text(
                     "Batal",
-                    style: AppStyles.styleTextBody16(size: 15, fontWeight: FontWeight.w700, colorText: AppColors.purple),
+                    style: AppStyles.styleTextBody(size: 15.sp, fontWeight: FontWeight.w700, colorText: AppColors.purple),
                     textAlign: TextAlign.center,
                   ),
                   isFullButton: false,

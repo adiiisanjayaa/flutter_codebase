@@ -1,6 +1,7 @@
 import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/app_image.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SocialButton extends StatelessWidget {
   const SocialButton({super.key, required this.onPressed, required this.label, required this.svgIcon, this.iconColor});
@@ -24,9 +25,10 @@ class SocialButton extends StatelessWidget {
         ),
         label: Text(
           label,
-          style: AppStyles.styleTextBody16OpenSans(
+          style: AppStyles.styleTextBody(
             fontWeight: FontWeight.w500,
             colorText: AppColors.textBlack,
+            size: 18.sp,
           ),
           textAlign: TextAlign.center,
         ),

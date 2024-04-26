@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:app/core/themes/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class OverLayLoader {
   OverLayLoader._privateConstructor();
@@ -109,7 +110,9 @@ class _LoaderSection extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               text!,
-              style: AppStyles.styleTextBody14(),
+              style: AppStyles.styleTextBody(
+                size: 16.sp,
+              ),
             )
           ],
         ),
