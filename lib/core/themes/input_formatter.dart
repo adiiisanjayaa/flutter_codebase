@@ -1,5 +1,6 @@
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class AppInputFormatter {
@@ -7,17 +8,17 @@ class AppInputFormatter {
 
   /// Allow to input float/double with max number after point format text
   static List<TextInputFormatter> validDecimalPointFormat(int maxAfterPoint) => [
-    TextInputFormatter.withFunction((oldValue, newValue) {
-      if (newValue.text.contains(',')) {
-        return newValue.copyWith(
-          text: newValue.text.replaceAll(',', '.'),
-        );
-      }
-      return newValue;
-    }),
-    // ignore: unnecessary_string_escapes
-    FilteringTextInputFormatter.allow(RegExp('^([1-9]\\d*|0)(\\.\\d{0,$maxAfterPoint})?\$\|^\\d+\\.\$')),
-  ];
+        TextInputFormatter.withFunction((oldValue, newValue) {
+          if (newValue.text.contains(',')) {
+            return newValue.copyWith(
+              text: newValue.text.replaceAll(',', '.'),
+            );
+          }
+          return newValue;
+        }),
+        // ignore: unnecessary_string_escapes
+        FilteringTextInputFormatter.allow(RegExp('^([1-9]\\d*|0)(\\.\\d{0,$maxAfterPoint})?\$\|^\\d+\\.\$')),
+      ];
 
   /// Allow to input float/double format text
   static List<TextInputFormatter> validDecimalFormat = [
@@ -53,9 +54,11 @@ class AppInputFormatter {
   /// Auto formatting to currency Indonesia
   static List<TextInputFormatter> currencyIdFormat = [
     CurrencyTextInputFormatter(
-      locale: 'id',
-      symbol: '',
-      decimalDigits: 0,
+      NumberFormat.currency(
+        locale: 'id',
+        symbol: '',
+        decimalDigits: 0,
+      ),
       enableNegative: false,
     )
   ];
@@ -80,7 +83,7 @@ class AppInputFormatter {
   static List<TextInputFormatter> dateMMyyyyFormat = [
     MaskTextInputFormatter(
       mask: '## / ####',
-      filter: { "#": RegExp(r'[0-9]') },
+      filter: {"#": RegExp(r'[0-9]')},
     ),
     TextInputFormatter.withFunction((oldValue, newValue) {
       if (newValue.text.length >= 2) {
@@ -103,7 +106,7 @@ class AppInputFormatter {
   static List<TextInputFormatter> creditCardFormat = [
     MaskTextInputFormatter(
       mask: '#### #### #### ####',
-      filter: { "#": RegExp(r'[0-9]') },
+      filter: {"#": RegExp(r'[0-9]')},
     )
   ];
 

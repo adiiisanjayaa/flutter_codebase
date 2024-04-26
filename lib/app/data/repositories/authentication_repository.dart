@@ -1,55 +1,56 @@
-import 'dart:developer';
-
-import 'package:app/app/data/datasources/member/remote/member_api_provider.dart';
 import 'package:app/app/data/models/member/login_response.dart';
 import 'package:app/app/data/models/member/register_response.dart';
 import 'package:app/core/base/base_result.dart';
-import 'package:app/core/network/exceptions/network_exception.dart';
+import 'package:app/core/constant/api_url_constant.dart';
+import 'package:app/core/network/clients/api_client.dart';
 
 class AuthenticationRepository {
-  final MemberApiProvider memberProvider;
+  final ApiClient httpClient;
+  final ApiClient dioClient;
 
-  AuthenticationRepository({
-    required this.memberProvider,
-  });
+  AuthenticationRepository({required this.httpClient, required this.dioClient});
 
-  Future<LoginResponse?> login({
+  Future<Result<LoginResponse>> login({
     required String phoneEmail,
     required String password,
     required String? fcmToken,
   }) async {
-    var res = await memberProvider.login(
-      phoneEmail: phoneEmail,
-      password: password,
-      fcmToken: fcmToken,
-    );
+    try {
+      String url = ApiUrlConstant.memberLogin;
+      var body = {
+        'phoneEmail': phoneEmail,
+        'password': password,
+        'fcmToken': fcmToken,
+      };
+      var response = await httpClient.post(
+        url,
+        body: body,
+      );
 
-    switch (res) {
-      case SuccessRes(value: final value):
-        return value;
-      case FailureRes(error: final error):
-        log('error login: $error');
-        if (error is NetworkException) {}
-        return Future.error(error);
+      return SuccessRes(LoginResponse.fromJson(response));
+    } catch (e) {
+      return FailureRes(e);
     }
   }
 
-  Future<RegisterResponse?> register({
+  Future<Result<RegisterResponse>> register({
     required String phone,
     required String email,
-    bool isRecaptchaV2 = false,
   }) async {
-    var res = await memberProvider.register(
-      phone: phone,
-      email: email,
-    );
-    switch (res) {
-      case SuccessRes(value: final value):
-        return value;
-      case FailureRes(error: final error):
-        log('error register: $error');
-        if (error is NetworkException && !isRecaptchaV2) {}
-        return Future.error(error);
+    try {
+      String url = ApiUrlConstant.memberRegister;
+      var body = {
+        'phone': phone,
+        'email': email,
+      };
+      var response = await httpClient.post(
+        url,
+        body: body,
+      );
+
+      return SuccessRes(RegisterResponse.fromJson(response));
+    } catch (e) {
+      return FailureRes(e);
     }
   }
 }

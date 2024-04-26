@@ -1,0 +1,18 @@
+"/Users/adisanjaya/Documents/flutter_codebase/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageUtility.swift":
+  diagnostics: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageUtility.dia"
+  dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageUtility.d"
+  object: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageUtility.o"
+  const-values: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageUtility.swiftconstvalues"
+  swift-dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageUtility.swiftdeps"
+"/Users/adisanjaya/Documents/flutter_codebase/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImagePreviewVC.swift":
+  dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImagePreviewVC.d"
+  object: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImagePreviewVC.o"
+  const-values: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImagePreviewVC.swiftconstvalues"
+  swift-dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImagePreviewVC.swiftdeps"
+  diagnostics: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImagePreviewVC.dia"
+"/Users/adisanjaya/Documents/flutter_codebase/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageView.swift":
+  dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageView.d"
+  object: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageView.o"
+  swift-dependencies: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageView.swiftdeps"
+  diagnostics: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageView.dia"
+  const-values: "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/DKPhotoGallery.build/Objects-normal/arm64/DKPhotoImageView.swiftconstvalues"

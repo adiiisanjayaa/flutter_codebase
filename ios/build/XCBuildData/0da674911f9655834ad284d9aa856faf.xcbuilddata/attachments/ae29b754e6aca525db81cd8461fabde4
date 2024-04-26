@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/connectivity_plus-master.dia",
+    "emit-module-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/connectivity_plus-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/connectivity_plus-master-emit-module.dia",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/connectivity_plus-master.swiftdeps"
+  },
+  "/Users/adisanjaya/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.3/darwin/Classes/ConnectivityProvider.swift" : {
+    "const-values" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.swiftconstvalues",
+    "dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.d",
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.o",
+    "llvm-bc" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.bc",
+    "object" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.o",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider.swiftdeps",
+    "swiftmodule" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/ConnectivityProvider~partial.swiftmodule"
+  },
+  "/Users/adisanjaya/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.3/darwin/Classes/PathMonitorConnectivityProvider.swift" : {
+    "const-values" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.swiftconstvalues",
+    "dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.d",
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.o",
+    "llvm-bc" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.bc",
+    "object" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.o",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider.swiftdeps",
+    "swiftmodule" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/PathMonitorConnectivityProvider~partial.swiftmodule"
+  },
+  "/Users/adisanjaya/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.3/darwin/Classes/SwiftConnectivityPlusPlugin.swift" : {
+    "const-values" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.swiftconstvalues",
+    "dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.d",
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.o",
+    "llvm-bc" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.bc",
+    "object" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.o",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin.swiftdeps",
+    "swiftmodule" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/connectivity_plus.build/Objects-normal/arm64/SwiftConnectivityPlusPlugin~partial.swiftmodule"
+  }
+}

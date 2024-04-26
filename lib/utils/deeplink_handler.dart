@@ -3,13 +3,13 @@ import 'dart:developer';
 import 'package:app/core/constant/deeplink_constant.dart';
 import 'package:app/core/constant/storage_names.dart';
 import 'package:app/utils/storage_methods.dart';
-import 'package:uni_links/uni_links.dart';
+import 'package:app_links/app_links.dart';
 
 class DeeplinkHandler {
   DeeplinkHandler._privateConstructor();
 
   static final DeeplinkHandler instance = DeeplinkHandler._privateConstructor();
-
+  final _appLinks = AppLinks();
   StreamSubscription? subUniLinks;
 
   Future<void> initDeeplink() async {
@@ -17,7 +17,7 @@ class DeeplinkHandler {
       await subUniLinks?.cancel();
     }
     try {
-      String? initialURI = await getInitialLink();
+      String? initialURI = await _appLinks.getInitialAppLinkString();
       log("Deeplink init $initialURI");
       var link = await StorageMethods.find.getData(
         StorageNames.deepLink,
@@ -30,7 +30,7 @@ class DeeplinkHandler {
       log("Error getInitialLink deep link : $e");
     }
 
-    subUniLinks = uriLinkStream.listen((Uri? uri) {
+    subUniLinks = _appLinks.uriLinkStream.listen((Uri? uri) {
       log('Deeplink listen ${uri ?? 'null'}');
       if (uri != null) {
         _listenLink(uri.toString());

@@ -6,15 +6,17 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 class NetworkChecker {
   Future<bool> check() async {
     try {
-      ConnectivityResult connectivityResult = await (Connectivity().checkConnectivity());
-      if (connectivityResult == ConnectivityResult.mobile) {
-        return checkInternetConnection(connectivityResult);
-      } else if (connectivityResult == ConnectivityResult.wifi) {
-        return checkInternetConnection(connectivityResult);
-      } else {
-        // This needed cause there is case in IOS either the mobile/wifi is ON, the connectivity result still have value ConnectivityResult.none
-        return checkInternetConnection(connectivityResult);
+      List<ConnectivityResult> connectivityResult = await (Connectivity().checkConnectivity());
+      for (var connectivity in connectivityResult) {
+        if (connectivity == ConnectivityResult.mobile) {
+          return checkInternetConnection(connectivity);
+        } else if (connectivity == ConnectivityResult.wifi) {
+          return checkInternetConnection(connectivity);
+        } else {
+          return checkInternetConnection(connectivity);
+        }
       }
+      return false;
     } catch (e) {
       log("Network Check: error Connectivity");
       return false;

@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/app_settings-master.dia",
+    "emit-module-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/app_settings-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/app_settings-master-emit-module.dia",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/app_settings-master.swiftdeps"
+  },
+  "/Users/adisanjaya/.pub-cache/hosted/pub.dev/app_settings-5.1.1/ios/Classes/AppSettingsPlugin.swift" : {
+    "const-values" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.swiftconstvalues",
+    "dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.d",
+    "diagnostics" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.o",
+    "llvm-bc" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.bc",
+    "object" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.o",
+    "swift-dependencies" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin.swiftdeps",
+    "swiftmodule" : "/Users/adisanjaya/Documents/flutter_codebase/ios/build/Pods.build/Debug-iphoneos/app_settings.build/Objects-normal/arm64/AppSettingsPlugin~partial.swiftmodule"
+  }
+}

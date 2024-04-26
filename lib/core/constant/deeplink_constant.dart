@@ -7,6 +7,5 @@ class DeeplinkConstant {
   static const String hostNameWithHttps = 'https://$hostName';
   static const String hostNameWithWwwHttp = 'http://www.$hostName';
   static const String hostNameWithWwwHttps = 'https://www.$hostName';
-
   static const String emailActivate = '$hostName/emailactivate';
 }

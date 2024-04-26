@@ -1,6 +1,5 @@
 import 'dart:developer';
-import 'package:app/app/data/datasources/api_provider_manager.dart';
-import 'package:app/app/data/datasources/database_table_manager.dart';
+import 'package:app/app/data/repositories/database_table_manager.dart';
 import 'package:app/app/data/repositories/repository_manager.dart';
 import 'package:app/core/constant/app_constant.dart';
 import 'package:app/core/constant/event_name.dart';
@@ -69,7 +68,6 @@ class MainBinding implements Bindings {
     );
     ApiClientManager.initialize();
     await DatabaseTableManager.initialize();
-    ApiProviderManager.initialize();
     RepositoryManager.initialize();
 
     // Get.put(UserService(), permanent: true);
