@@ -24,6 +24,12 @@ FLUTTER V3.19.6
 
 APP_NAME adalah
 
+# Setup
+
+flutter clean
+flutter pub get
+fluttergen -c pubspec.yaml
+
 ## :ledger: Index
 
 - [About](#beginner-about)

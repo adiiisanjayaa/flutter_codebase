@@ -59,11 +59,24 @@ dependency_overrides:
   http: ^1.2.1
 
 dev_dependencies: 
-  flutter_lints: ^2.0.0
-  change_app_package_name: ^1.1.0
   flutter_test: 
     sdk: flutter
+  flutter_lints: ^2.0.0
+  change_app_package_name: ^1.1.0
+  build_runner: ^2.4.9
+  flutter_gen: ^5.6.0
 
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
+    
 flutter: 
   uses-material-design: true
   assets:
