@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 enum LancerAppBarLeading { back, close, none, custom }
 
-class LancerAppBar extends StatelessWidget {
+class CustomAppBar extends StatelessWidget {
   final String title;
   final Widget? widget;
   final double height;
@@ -21,7 +21,7 @@ class LancerAppBar extends StatelessWidget {
   final bool statusBarIconIsDark;
   final double? leadingWidth;
 
-  const LancerAppBar({
+  const CustomAppBar({
     super.key,
     required this.title,
     this.widget,

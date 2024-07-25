@@ -7,7 +7,6 @@ import 'package:app/utils/method/analytics_method.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/network/api_client_manager.dart';
 
@@ -17,7 +16,6 @@ class MainBinding implements Bindings {
     // await Firebase.initializeApp(
     //   options: DefaultFirebaseOptions.currentPlatform,
     // );
-
     if (!kDebugMode) {
       try {
         FlutterError.onError = (FlutterErrorDetails details) {
@@ -30,7 +28,6 @@ class MainBinding implements Bindings {
     }
     // FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
     // FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
-    AnalyticsMethod.logEvent(EventName.mainInitEvent);
     // await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
     //   alert: true, // Required to display a heads up notification
     //   badge: true,
@@ -44,17 +41,7 @@ class MainBinding implements Bindings {
     //   LocalNotificationService.onNotificationTapBG(event);
     // });
 
-    await Get.putAsync<SharedPreferences>(
-      () async {
-        return await SharedPreferences.getInstance();
-      },
-      permanent: true,
-    );
-    // StorageMethods.find.setData(StorageNames.countRefreshToken, null);
-    // StorageMethods.find.setData(
-    //   StorageNames.guest,
-    //   0,
-    // );
+    AnalyticsMethod.logEvent(EventName.mainInitEvent);
 
     Get.put(
       Dio(

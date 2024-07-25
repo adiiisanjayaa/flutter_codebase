@@ -1,2 +1,4 @@
 // GENERAL
-const add = 'add';
+class Tr {
+  static const add = 'add';
+}

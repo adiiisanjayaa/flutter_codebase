@@ -17,7 +17,7 @@ class DeeplinkHandler {
       await subUniLinks?.cancel();
     }
     try {
-      String? initialURI = await _appLinks.getInitialAppLinkString();
+      String? initialURI = await _appLinks.getInitialLinkString();
       log("Deeplink init $initialURI");
       var link = await StorageMethods.find.getData(
         StorageNames.deepLink,
@@ -49,12 +49,8 @@ class DeeplinkHandler {
     if (link == null) {
       return;
     }
-    String route = link
-        .replaceAll(DeeplinkConstant.hostNameWithHttp, '')
-        .replaceAll(DeeplinkConstant.hostNameWithHttps, '')
-        .replaceAll(DeeplinkConstant.hostNameWithWwwHttp, '')
-        .replaceAll(DeeplinkConstant.hostNameWithWwwHttps, '');
 
+    String route = link.replaceAll(DeeplinkConstant.hostNameWithHttp, '').replaceAll(DeeplinkConstant.hostNameWithHttps, '').replaceAll(DeeplinkConstant.hostNameWithWwwHttp, '').replaceAll(DeeplinkConstant.hostNameWithWwwHttps, '');
     _deeplinkGeneral(link, route, isLogin);
     if (isLogin && isHome) {
       _deeplinkUserLogin(route);

@@ -1,4 +1,5 @@
 import 'package:app/main_binding.dart';
+import 'package:app/translations/app_translations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,7 +12,6 @@ import 'app/routes/app_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
 
@@ -24,14 +24,16 @@ void main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await MainBinding().dependencies(isTest: kDebugMode);
 
-  initializeDateFormatting().then(
-    (_) => runApp(const MyApp()),
-  );
+  Locale localLanguage = Get.deviceLocale ?? const Locale('id', 'ID');
+  await initializeDateFormatting(localLanguage.toString());
+  runApp(MyApp(startLocale: localLanguage));
 }
 
 class MyApp extends StatefulWidget {
+  final Locale startLocale;
   const MyApp({
     super.key,
+    required this.startLocale,
   });
 
   @override
@@ -51,10 +53,18 @@ class _MyAppState extends State<MyApp> {
       return GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: GetMaterialApp(
+          enableLog: kDebugMode,
           debugShowCheckedModeBanner: false,
           title: "APP",
+          translations: AppTranslations(),
+          locale: widget.startLocale,
+          fallbackLocale: const Locale('id', 'ID'), // Default locale for translations
           initialRoute: AppPages.INITIAL,
           getPages: AppPages.routes,
+          navigatorObservers: const [
+            /// The FirebaseAnalyticsObserver is a observer that listens to the navigation events in your Flutter app
+            // FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+          ],
         ),
       );
     });

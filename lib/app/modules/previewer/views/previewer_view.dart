@@ -6,7 +6,7 @@ import 'package:app/core/widgets/custom_dialog.dart';
 import 'package:app/core/widgets/custom_input_field/custom_input_field.dart';
 import 'package:app/core/widgets/custom_radio.dart';
 import 'package:app/core/widgets/custom_snack_bar.dart';
-import 'package:app/core/widgets/lancer_app_bar.dart';
+import 'package:app/core/widgets/custom_app_bar.dart';
 import 'package:app/core/widgets/lancer_dialog.dart';
 import 'package:app/core/widgets/loader.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class PreviewerView extends GetView<PreviewerController> {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(50),
-        child: LancerAppBar(
+        child: CustomAppBar(
           title: "Title",
           appBarColor: AppColors.white,
           centerTitle: false,

@@ -1,8 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class StorageMethods {
   StorageMethods._privateConstructor();
@@ -10,62 +9,60 @@ class StorageMethods {
   static final StorageMethods find = StorageMethods._privateConstructor();
 
   /// set data to local
-  Future<bool?> setData(String? key, dynamic value) async {
+  Future<bool?> setData(String key, dynamic value) async {
     try {
-      final SharedPreferences pref = Get.find<SharedPreferences>();
+      const storage = FlutterSecureStorage();
       String encodeData = "";
       encodeData = json.encode(value);
       final String jsonVal = encodeData;
-      return pref.setString(key!, jsonVal);
-    } catch (e, _) {
-      log("error encode");
-      try {
-        // FirebaseCrashlytics.instance.recordError(e, s, reason: 'IDEAL: failed to set data SharedPreferences with key $key and value $value');
-      } catch (_) {}
+      storage.write(key: key, value: jsonVal);
+      return true;
+    } catch (e) {
+      log('Failed to set data : $e');
       return false;
     }
   }
 
   /// set bool to local
-  Future<bool?> setBool(String? key, bool? value) async {
-    final SharedPreferences pref = Get.find<SharedPreferences>();
+  Future<bool?> setBool(String key, bool value) async {
     try {
-      return await pref.setBool(key!, value!);
+      const storage = FlutterSecureStorage();
+      await storage.write(key: key, value: value.toString());
+      return true;
     } catch (e) {
       return false;
     }
   }
 
   /// remove data from local
-  Future<bool?> remove(String? key) async {
-    final SharedPreferences pref = Get.find<SharedPreferences>();
+  Future<bool?> remove(String key) async {
     try {
-      return await pref.remove(key!);
+      const storage = FlutterSecureStorage();
+      await storage.delete(key: key);
+      return true;
     } catch (e) {
       return false;
     }
   }
 
   /// set data to local
-  getData(String? key) {
+  getData(String key) async {
     try {
-      final SharedPreferences pref = Get.find<SharedPreferences>();
-      final String? source = pref.getString(key!);
+      const storage = FlutterSecureStorage();
+      final String? source = await storage.read(key: key);
       if (source == null) return null;
-      final map = json.decode(source);
-      return map;
-    } catch (e, _) {
-      try {
-        // FirebaseCrashlytics.instance.recordError(e, s, reason: 'IDEAL: failed to get data SharedPreferences with key $key');
-      } catch (_) {}
+      // final map = json.decode(source);
+      return source;
+    } catch (e) {
+      log('Failed to get data : $e');
     }
   }
 
   /// set bool to local
-  bool getBool(String? key) {
-    final SharedPreferences pref = Get.find<SharedPreferences>();
+  bool getBool(String key) {
     try {
-      return pref.getBool(key!) ?? false;
+      const storage = FlutterSecureStorage();
+      return storage.read(key: key).toString() == "true" ? true : false;
     } catch (e) {
       return false;
     }

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import 'translation_keys.dart' as translation;
+import 'translation_keys.dart';
 
 part 'en_us.dart';
 part 'id.dart';

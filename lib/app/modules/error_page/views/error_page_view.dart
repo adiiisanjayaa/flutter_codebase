@@ -1,5 +1,5 @@
 import 'package:app/core/themes/themes.dart';
-import 'package:app/core/widgets/lancer_app_bar.dart';
+import 'package:app/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/error_page_controller.dart';
@@ -19,7 +19,7 @@ class ErrorPageView extends GetView<ErrorPageController> {
           backgroundColor: AppColors.white,
           appBar: const PreferredSize(
             preferredSize: Size.fromHeight(50),
-            child: LancerAppBar(
+            child: CustomAppBar(
               title: "",
               appBarColor: AppColors.white,
               centerTitle: false,
