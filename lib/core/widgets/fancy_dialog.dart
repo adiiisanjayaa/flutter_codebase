@@ -20,18 +20,7 @@ class AppFancyDialog extends StatefulWidget {
   final IdSimpleCloseType closeType;
   final bool isConnection;
 
-  const AppFancyDialog(
-      {super.key,
-      required this.title,
-      this.withImage,
-      this.desc,
-      this.descWidget,
-      this.textSize,
-      this.positiveButton,
-      this.negativeButton,
-      this.positiveButtonColor,
-      this.closeType = IdSimpleCloseType.dark,
-      this.isConnection = false});
+  const AppFancyDialog({super.key, required this.title, this.withImage, this.desc, this.descWidget, this.textSize, this.positiveButton, this.negativeButton, this.positiveButtonColor, this.closeType = IdSimpleCloseType.dark, this.isConnection = false});
 
   @override
   AppDialogState createState() => AppDialogState();
@@ -145,10 +134,10 @@ class AppDialogState extends State<AppFancyDialog> {
       childBuilder: (_, style) => Text(
         widget.positiveButton!,
         textAlign: TextAlign.center,
-        style: AppStyles.styleTextBody(
+        style: AppStyles.styleText(
           size: 13.sp,
           fontWeight: FontWeight.bold,
-          colorText: AppColors.white,
+          color: AppColors.white,
         ),
       ),
       isFullButton: true,
@@ -167,10 +156,10 @@ class AppDialogState extends State<AppFancyDialog> {
       },
       childBuilder: (_, style) => Text(
         widget.negativeButton!,
-        style: AppStyles.styleTextBody(
+        style: AppStyles.styleText(
           size: 13.sp,
           fontWeight: FontWeight.w700,
-          colorText: AppColors.green,
+          color: AppColors.green,
         ),
         textAlign: TextAlign.center,
       ),
@@ -205,7 +194,7 @@ class AppDialogState extends State<AppFancyDialog> {
                 padding: const EdgeInsets.only(left: 8, right: 8, top: 0),
                 child: Text(
                   widget.title,
-                  style: AppStyles.styleTextBody(size: 20.sp, colorText: Colors.black, fontWeight: FontWeight.bold),
+                  style: AppStyles.styleText(size: 20.sp, color: Colors.black, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -216,7 +205,7 @@ class AppDialogState extends State<AppFancyDialog> {
                   padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
                   child: Text(
                     widget.desc!,
-                    style: AppStyles.styleTextBody(size: 16.sp, colorText: Colors.black),
+                    style: AppStyles.styleText(size: 16.sp, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),

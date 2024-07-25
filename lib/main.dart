@@ -1,3 +1,4 @@
+import 'package:app/core/themes/app_theme.dart';
 import 'package:app/main_binding.dart';
 import 'package:app/translations/app_translations.dart';
 import 'package:flutter/foundation.dart';
@@ -61,6 +62,7 @@ class _MyAppState extends State<MyApp> {
           fallbackLocale: const Locale('id', 'ID'), // Default locale for translations
           initialRoute: AppPages.INITIAL,
           getPages: AppPages.routes,
+          theme: AppTheme.light(),
           navigatorObservers: const [
             /// The FirebaseAnalyticsObserver is a observer that listens to the navigation events in your Flutter app
             // FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),

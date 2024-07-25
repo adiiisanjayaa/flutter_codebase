@@ -57,8 +57,8 @@ class NumberInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -73,7 +73,7 @@ class NumberInputField extends StatelessWidget {
           keyboardType: getKeyboardType(),
           inputFormatters: getInputFormatter(),
           maxLength: maxLength,
-          style: AppStyles.styleTextBody(
+          style: AppStyles.styleText(
             fontWeight: FontWeight.w400,
             size: 16.sp,
           ),
@@ -92,7 +92,7 @@ class NumberInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleText(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],
@@ -215,8 +215,8 @@ class CurrencyTextInputField extends StatelessWidget {
         children: [
           Text(
             'Rp',
-            style: AppStyles.styleTextBody(
-              colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
+            style: AppStyles.styleText(
+              color: isEnable ? AppColors.grayDark : AppColors.grayMedium,
               fontWeight: FontWeight.w700,
               size: 16.sp,
             ),
@@ -279,8 +279,8 @@ class PercentInputField extends StatelessWidget {
         children: [
           Text(
             '%',
-            style: AppStyles.styleTextBody(
-              colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
+            style: AppStyles.styleText(
+              color: isEnable ? AppColors.grayDark : AppColors.grayMedium,
               fontWeight: FontWeight.w700,
               size: 16.sp,
             ),
@@ -342,8 +342,8 @@ class NumericInputField extends StatelessWidget {
       padding: getAdditionalPaddingSuffixIcon(borderType),
       child: Text(
         suffixText.orEmpty,
-        style: AppStyles.styleTextBody(
-          colorText: isEnable ? AppColors.grayDark : AppColors.grayMedium,
+        style: AppStyles.styleText(
+          color: isEnable ? AppColors.grayDark : AppColors.grayMedium,
           fontWeight: FontWeight.w700,
           size: 16.sp,
         ),

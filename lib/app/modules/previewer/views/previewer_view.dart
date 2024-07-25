@@ -1,3 +1,4 @@
+import 'package:app/core/themes/app_theme.dart';
 import 'package:app/core/themes/themes.dart';
 import 'package:app/core/widgets/chip_button.dart';
 import 'package:app/core/widgets/custom_button.dart';
@@ -19,12 +20,14 @@ class PreviewerView extends GetView<PreviewerController> {
   const PreviewerView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final buttonStyle = Theme.of(context).elevatedButtonTheme.style;
+
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: CustomAppBar(
           title: "Title",
-          appBarColor: AppColors.white,
           centerTitle: false,
           actions: [],
         ),
@@ -53,17 +56,15 @@ class PreviewerView extends GetView<PreviewerController> {
             ).marginOnly(bottom: 20),
             CustomButton(
               type: ButtonType.filled,
-              onPressed: () {},
+              onPressed: () {
+                // print('THEME CHANGED');
+                Get.changeTheme(Get.isDarkMode ? AppTheme.light() : AppTheme.dark());
+              },
               radiusButton: 10,
               enabled: true,
               childBuilder: (context, style) => Text(
-                "BUTTON",
-                style: AppStyles.styleTextBody(
-                  fontWeight: FontWeight.bold,
-                  height: 1.4,
-                  colorText: AppColors.white,
-                  size: 18.sp,
-                ),
+                "THEME",
+                style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               isFullButton: true,
@@ -76,12 +77,7 @@ class PreviewerView extends GetView<PreviewerController> {
               enabled: true,
               childBuilder: (context, style) => Text(
                 "BUTTON",
-                style: AppStyles.styleTextBody(
-                  fontWeight: FontWeight.bold,
-                  height: 1.4,
-                  colorText: AppColors.green,
-                  size: 18.sp,
-                ),
+                style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold, color: AppColors.green),
                 textAlign: TextAlign.center,
               ),
               isFullButton: true,

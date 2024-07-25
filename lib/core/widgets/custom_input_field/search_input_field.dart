@@ -21,8 +21,8 @@ class SearchInputField extends StatelessWidget {
     return TextFormField(
       controller: textController,
       onChanged: onChanged,
-      style: AppStyles.styleTextBody(
-        colorText: AppColors.grayDark,
+      style: AppStyles.styleText(
+        color: AppColors.grayDark,
         fontWeight: FontWeight.w400,
         size: 14.sp,
       ),

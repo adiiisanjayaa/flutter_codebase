@@ -25,8 +25,8 @@ class CustomSnackBar {
         messageText: customMessage ??
             Text(
               message,
-              style: AppStyles.styleTextBody(
-                colorText: Colors.white,
+              style: AppStyles.styleText(
+                color: Colors.white,
                 height: 1.4,
                 size: 16.sp,
               ),

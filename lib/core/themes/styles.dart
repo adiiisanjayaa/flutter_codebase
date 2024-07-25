@@ -5,8 +5,8 @@ import 'themes.dart';
 class AppStyles {
   AppStyles._();
 
-  static TextStyle styleTextBody({
-    Color? colorText,
+  static TextStyle styleText({
+    Color? color,
     required double size,
     FontWeight? fontWeight,
     double? height = 1,
@@ -14,7 +14,7 @@ class AppStyles {
   }) =>
       TextStyle(
         fontFamily: FontFamily.MavenPro,
-        color: colorText,
+        color: color,
         fontWeight: fontWeight,
         fontSize: size,
         height: height,

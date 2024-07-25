@@ -43,8 +43,8 @@ class PasswordInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -58,7 +58,7 @@ class PasswordInputField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: TextInputType.text,
           inputFormatters: AppInputFormatter.passwordFormat,
-          style: AppStyles.styleTextBody(size: 16.sp, fontWeight: FontWeight.w400),
+          style: AppStyles.styleText(size: 16.sp, fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             hintText: hintText,
             suffixIcon: isShowSuffixIcon
@@ -80,7 +80,7 @@ class PasswordInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleText(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],

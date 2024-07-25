@@ -25,9 +25,9 @@ class SocialButton extends StatelessWidget {
         ),
         label: Text(
           label,
-          style: AppStyles.styleTextBody(
+          style: AppStyles.styleText(
             fontWeight: FontWeight.w500,
-            colorText: AppColors.textBlack,
+            color: AppColors.textBlack,
             size: 18.sp,
           ),
           textAlign: TextAlign.center,

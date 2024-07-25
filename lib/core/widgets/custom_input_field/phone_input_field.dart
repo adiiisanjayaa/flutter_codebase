@@ -38,8 +38,8 @@ class PhoneInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -53,7 +53,7 @@ class PhoneInputField extends StatelessWidget {
           validator: validator,
           keyboardType: TextInputType.phone,
           inputFormatters: AppInputFormatter.phoneFormat,
-          style: AppStyles.styleTextBody(size: 16.sp, fontWeight: FontWeight.w400),
+          style: AppStyles.styleText(size: 16.sp, fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             hintText: hintText,
             prefixIcon: Padding(
@@ -63,8 +63,8 @@ class PhoneInputField extends StatelessWidget {
                 children: [
                   Text(
                     '+62',
-                    style: AppStyles.styleTextBody(
-                      colorText: AppColors.grayDark,
+                    style: AppStyles.styleText(
+                      color: AppColors.grayDark,
                       fontWeight: FontWeight.w700,
                       size: 16.sp,
                     ),
@@ -85,7 +85,7 @@ class PhoneInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleText(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],

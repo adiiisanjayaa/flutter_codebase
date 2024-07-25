@@ -51,6 +51,7 @@ class CustomAppBar extends StatelessWidget {
             )
     ];
     if (widget != null) widgets.add(widget!);
+    final textTheme = Theme.of(context).textTheme;
     return SizedBox(
       height: calculatedHeight,
       child: AppBar(
@@ -62,13 +63,13 @@ class CustomAppBar extends StatelessWidget {
               title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: textStyle ?? const TextStyle(color: AppColors.textBlack, fontWeight: FontWeight.bold, fontSize: 20),
+              style: textStyle ?? textTheme.bodyMedium,
             ),
         flexibleSpace: Stack(
           children: widgets,
         ),
         actions: actions,
-        backgroundColor: appBarColor ?? Colors.white,
+        backgroundColor: appBarColor,
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle(
           // For Android will affect Status Bar Icon
@@ -88,12 +89,12 @@ class CustomAppBar extends StatelessWidget {
     switch (leadingType) {
       case LancerAppBarLeading.back:
         return IconButton(
-          icon: Icon(Icons.arrow_back_sharp, color: colorLeading != null ? colorLeading! : AppColors.textBlack),
+          icon: Icon(Icons.arrow_back_sharp, color: colorLeading),
           onPressed: action,
         );
       case LancerAppBarLeading.close:
         return IconButton(
-          icon: Icon(Icons.close, color: colorLeading != null ? colorLeading! : AppColors.textBlack),
+          icon: Icon(Icons.close, color: colorLeading),
           onPressed: action,
         );
       case LancerAppBarLeading.custom:

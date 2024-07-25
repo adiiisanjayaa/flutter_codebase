@@ -37,8 +37,8 @@ class BodyErrorMessage extends StatelessWidget {
               ).marginOnly(bottom: 20),
               Text(
                 title,
-                style: AppStyles.styleTextBody(
-                  colorText: AppColors.textBlack,
+                style: AppStyles.styleText(
+                  color: AppColors.textBlack,
                   height: 1.4,
                   size: 18.sp,
                 ),
@@ -46,8 +46,8 @@ class BodyErrorMessage extends StatelessWidget {
               ).marginOnly(bottom: 16.0),
               Text(
                 content,
-                style: AppStyles.styleTextBody(
-                  colorText: AppColors.grayMedium,
+                style: AppStyles.styleText(
+                  color: AppColors.grayMedium,
                   height: 1.4,
                   size: 14.sp,
                 ),
@@ -57,8 +57,8 @@ class BodyErrorMessage extends StatelessWidget {
                 onTap: action,
                 child: Text(
                   titleAction,
-                  style: AppStyles.styleTextBody(
-                    colorText: AppColors.purple,
+                  style: AppStyles.styleText(
+                    color: AppColors.purple,
                     fontWeight: FontWeight.bold,
                     size: 16.sp,
                   ),

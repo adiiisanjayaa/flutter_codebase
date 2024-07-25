@@ -43,8 +43,8 @@ class TextInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -60,7 +60,7 @@ class TextInputField extends StatelessWidget {
           maxLines: isMultipleLine ? 4 : null,
           maxLength: maxLength,
           inputFormatters: inputFormatters,
-          style: AppStyles.styleTextBody(size: 16.sp, fontWeight: FontWeight.w400, height: 1.3),
+          style: AppStyles.styleText(size: 16.sp, fontWeight: FontWeight.w400, height: 1.3),
           decoration: InputDecoration(
             counterText: '',
             hintText: hintText,
@@ -71,7 +71,7 @@ class TextInputField extends StatelessWidget {
             errorBorder: getErrorBorderStyle(borderType),
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
-            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleTextBody(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
+            errorStyle: (errorText ?? '').isNotEmpty ? AppStyles.styleText(size: 14.sp, fontWeight: FontWeight.w400) : const TextStyle(height: 0),
           ),
         ),
       ],

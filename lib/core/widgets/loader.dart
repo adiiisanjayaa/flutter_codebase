@@ -110,7 +110,7 @@ class _LoaderSection extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               text!,
-              style: AppStyles.styleTextBody(
+              style: AppStyles.styleText(
                 size: 16.sp,
               ),
             )

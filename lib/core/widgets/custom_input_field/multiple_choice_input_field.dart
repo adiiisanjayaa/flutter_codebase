@@ -49,8 +49,8 @@ class MultipleChoiceInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -66,7 +66,7 @@ class MultipleChoiceInputField extends StatelessWidget {
           keyboardType: TextInputType.none,
           minLines: 1,
           maxLines: maxLines,
-          style: AppStyles.styleTextBody(
+          style: AppStyles.styleText(
             fontWeight: FontWeight.w400,
             height: 1.4,
             size: 16.sp,
@@ -94,7 +94,7 @@ class MultipleChoiceInputField extends StatelessWidget {
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
             errorStyle: (errorText ?? '').isNotEmpty
-                ? AppStyles.styleTextBody(
+                ? AppStyles.styleText(
                     fontWeight: FontWeight.w400,
                     size: 14.sp,
                   )

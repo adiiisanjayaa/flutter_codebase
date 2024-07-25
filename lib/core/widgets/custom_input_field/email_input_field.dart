@@ -36,8 +36,8 @@ class EmailInputField extends StatelessWidget {
           Text(
             title.orEmpty,
             textAlign: TextAlign.start,
-            style: AppStyles.styleTextBody(
-              colorText: AppColors.textBlack,
+            style: AppStyles.styleText(
+              color: AppColors.textBlack,
               fontWeight: FontWeight.w400,
               size: 14.sp,
             ),
@@ -50,7 +50,7 @@ class EmailInputField extends StatelessWidget {
           validator: validator,
           keyboardType: TextInputType.emailAddress,
           minLines: 1,
-          style: AppStyles.styleTextBody(
+          style: AppStyles.styleText(
             fontWeight: FontWeight.w400,
             size: 16.sp,
           ),
@@ -64,7 +64,7 @@ class EmailInputField extends StatelessWidget {
             focusedErrorBorder: getErrorBorderStyle(borderType),
             errorText: errorText,
             errorStyle: (errorText ?? '').isNotEmpty
-                ? AppStyles.styleTextBody(
+                ? AppStyles.styleText(
                     fontWeight: FontWeight.w400,
                     size: 14.sp,
                   )

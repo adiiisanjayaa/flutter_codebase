@@ -36,9 +36,9 @@ class ChipButton extends StatelessWidget {
           children: [
             Text(
               title,
-              style: AppStyles.styleTextBody(
+              style: AppStyles.styleText(
                 fontWeight: FontWeight.w400,
-                colorText: isSelected ? AppColors.white : AppColors.textBlack,
+                color: isSelected ? AppColors.white : AppColors.textBlack,
                 height: 1.4,
                 size: 16.sp,
               ),
